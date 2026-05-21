@@ -460,9 +460,16 @@ function Kontak() {
           </div>
         </div>
       </div>
-      <div className="max-w-6xl mx-auto mt-16 pt-8 border-t border-white/15 text-sm text-primary-foreground/70 flex flex-wrap justify-between gap-4">
-        <span>© {new Date().getFullYear()} Perum Jasa Tirta II — Jatiluhur</span>
-        <span>BUMN untuk Indonesia</span>
+      <div className="max-w-6xl mx-auto mt-16 pt-8 border-t border-white/15 flex flex-wrap items-center justify-between gap-6">
+        <div className="flex items-center gap-6 bg-white rounded-xl px-5 py-3">
+          <img src={logoJT2} alt="Perum Jasa Tirta II" className="h-10 w-auto" />
+          <div className="w-px h-8 bg-border" />
+          <img src={logoBUMN} alt="BUMN" className="h-10 w-auto" />
+        </div>
+        <div className="text-sm text-primary-foreground/70 flex flex-wrap gap-x-4 gap-y-1">
+          <span>© {new Date().getFullYear()} Perum Jasa Tirta II — Jatiluhur</span>
+          <span>BUMN untuk Indonesia</span>
+        </div>
       </div>
     </section>
   );
