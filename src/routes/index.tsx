@@ -18,6 +18,8 @@ import {
 import heroImg from "@/assets/hero-jatiluhur.jpg";
 import spillwayImg from "@/assets/spillway.jpg";
 import damWallImg from "@/assets/dam-wall.jpg";
+import logoJT2 from "@/assets/logo-jasatirta2.png";
+import logoBUMN from "@/assets/logo-bumn.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -49,18 +51,19 @@ function Nav() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 rounded-full bg-primary grid place-items-center text-primary-foreground">
-            <Droplets className="w-5 h-5" />
+        <a href="#top" className="flex items-center gap-3 group">
+          <div className={`rounded-lg px-2 py-1 transition-colors ${scrolled ? "bg-transparent" : "bg-white/90 backdrop-blur"}`}>
+            <img
+              src={logoJT2}
+              alt="Logo Perum Jasa Tirta II"
+              className="h-9 w-auto"
+            />
           </div>
-          <div className="leading-tight">
-            <div className={`font-bold text-sm ${scrolled ? "text-foreground" : "text-white"}`}>
-              Jasa Tirta II
-            </div>
-            <div className={`text-[10px] uppercase tracking-widest ${scrolled ? "text-muted-foreground" : "text-white/80"}`}>
-              Bendungan Jatiluhur
-            </div>
-          </div>
+          <img
+            src={logoBUMN}
+            alt="Logo BUMN"
+            className={`h-9 w-auto rounded px-1 transition-colors ${scrolled ? "bg-transparent" : "bg-white/90 backdrop-blur"}`}
+          />
         </a>
         <nav className="hidden md:flex items-center gap-1">
           {sections.map((s) => (
@@ -457,9 +460,16 @@ function Kontak() {
           </div>
         </div>
       </div>
-      <div className="max-w-6xl mx-auto mt-16 pt-8 border-t border-white/15 text-sm text-primary-foreground/70 flex flex-wrap justify-between gap-4">
-        <span>© {new Date().getFullYear()} Perum Jasa Tirta II — Jatiluhur</span>
-        <span>BUMN untuk Indonesia</span>
+      <div className="max-w-6xl mx-auto mt-16 pt-8 border-t border-white/15 flex flex-wrap items-center justify-between gap-6">
+        <div className="flex items-center gap-6 bg-white rounded-xl px-5 py-3">
+          <img src={logoJT2} alt="Perum Jasa Tirta II" className="h-10 w-auto" />
+          <div className="w-px h-8 bg-border" />
+          <img src={logoBUMN} alt="BUMN" className="h-10 w-auto" />
+        </div>
+        <div className="text-sm text-primary-foreground/70 flex flex-wrap gap-x-4 gap-y-1">
+          <span>© {new Date().getFullYear()} Perum Jasa Tirta II — Jatiluhur</span>
+          <span>BUMN untuk Indonesia</span>
+        </div>
       </div>
     </section>
   );
