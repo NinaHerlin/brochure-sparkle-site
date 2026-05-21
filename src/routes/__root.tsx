@@ -72,14 +72,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Bendungan Jatiluhur — Ir. H. Djuanda | Perum Jasa Tirta II" },
+      { name: "description", content: "Profil interaktif Bendungan Ir. H. Djuanda (Jatiluhur): sejarah, manfaat, data teknis, bendungan pelana, instrumentasi keselamatan, dan kontak Perum Jasa Tirta II." },
+      { name: "author", content: "Perum Jasa Tirta II" },
+      { property: "og:title", content: "Bendungan Jatiluhur — Ir. H. Djuanda" },
+      { property: "og:description", content: "Profil interaktif bendungan multiguna terbesar pertama di Indonesia." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
