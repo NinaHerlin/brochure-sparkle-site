@@ -51,18 +51,19 @@ function Nav() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-2 group">
-          <div className="w-9 h-9 rounded-full bg-primary grid place-items-center text-primary-foreground">
-            <Droplets className="w-5 h-5" />
+        <a href="#top" className="flex items-center gap-3 group">
+          <div className={`rounded-lg px-2 py-1 transition-colors ${scrolled ? "bg-transparent" : "bg-white/90 backdrop-blur"}`}>
+            <img
+              src={logoJT2}
+              alt="Logo Perum Jasa Tirta II"
+              className="h-9 w-auto"
+            />
           </div>
-          <div className="leading-tight">
-            <div className={`font-bold text-sm ${scrolled ? "text-foreground" : "text-white"}`}>
-              Jasa Tirta II
-            </div>
-            <div className={`text-[10px] uppercase tracking-widest ${scrolled ? "text-muted-foreground" : "text-white/80"}`}>
-              Bendungan Jatiluhur
-            </div>
-          </div>
+          <img
+            src={logoBUMN}
+            alt="Logo BUMN"
+            className={`h-9 w-auto rounded px-1 transition-colors ${scrolled ? "bg-transparent" : "bg-white/90 backdrop-blur"}`}
+          />
         </a>
         <nav className="hidden md:flex items-center gap-1">
           {sections.map((s) => (
