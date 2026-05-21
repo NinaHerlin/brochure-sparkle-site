@@ -18,6 +18,8 @@ import {
 import heroImg from "@/assets/hero-jatiluhur.jpg";
 import spillwayImg from "@/assets/spillway.jpg";
 import damWallImg from "@/assets/dam-wall.jpg";
+import logoJT2 from "@/assets/logo-jasatirta2.png";
+import logoBUMN from "@/assets/logo-bumn.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
