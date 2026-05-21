@@ -18,6 +18,12 @@ import {
 import heroImg from "@/assets/hero-jatiluhur.jpg";
 import spillwayImg from "@/assets/spillway.jpg";
 import damWallImg from "@/assets/dam-wall.jpg";
+import accelerographImg from "@/assets/Accelerograph.png";
+import vNotchImg from "@/assets/V-Notch.png";
+import topografiImg from "@/assets/Topografi.png";
+import piezometerImg from "@/assets/Piezometer.png";
+import klimatologiHidrologiImg from "@/assets/Klimatologi & Hidrologi.png";
+import inklinometerImg from "@/assets/Inklinometer.png";
 import logoJT2 from "@/assets/logo-jasatirta2.png";
 import logoBUMN from "@/assets/logo-bumn.png";
 import logoKemenpu from "@/assets/kemenpu.png";
@@ -52,7 +58,7 @@ function Nav() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-3 group">
+        <a href="#top" className="flex items-center gap-5 group">
           <img
             src={logoBUMN}
             alt="Logo BUMN"
@@ -361,12 +367,12 @@ function Pelana() {
 
 function Instrumentasi() {
   const tools = [
-    { name: "Inklinometer", desc: "Memantau pergerakan internal struktur bendungan." },
-    { name: "Piezometer", desc: "Mengukur tekanan air pori dalam tubuh bendungan." },
-    { name: "V-Notch & Stopwatch", desc: "Memantau rembesan/bocoran air." },
-    { name: "Accelerograph", desc: "Mengukur getaran akibat gempa bumi." },
-    { name: "Peralatan Topografi", desc: "Memantau pergerakan eksternal bendungan." },
-    { name: "Klimatologi & Hidrologi", desc: "Mencatat data iklim untuk operasi waduk." },
+    { name: "Inklinometer", desc: "Memantau pergerakan internal struktur bendungan.", image: inklinometerImg },
+    { name: "Piezometer", desc: "Mengukur tekanan air pori dalam tubuh bendungan.", image: piezometerImg },
+    { name: "V-Notch", desc: "Memantau rembesan/bocoran air.", image: vNotchImg },
+    { name: "Accelerograph", desc: "Mengukur getaran akibat gempa bumi.", image: accelerographImg },
+    { name: "Topografi", desc: "Memantau pergerakan eksternal bendungan.", image: topografiImg },
+    { name: "Klimatologi & Hidrologi", desc: "Mencatat data iklim untuk operasi waduk.", image: klimatologiHidrologiImg },
   ];
   return (
     <section id="instrumentasi" className="relative py-24 px-6">
@@ -381,17 +387,27 @@ function Instrumentasi() {
           {tools.map((t, i) => (
             <div
               key={i}
-              className="group p-6 rounded-2xl border border-border bg-card hover:bg-primary hover:text-primary-foreground transition-colors"
+              className="group overflow-hidden rounded-2xl border border-border bg-card transition-colors hover:bg-primary hover:text-primary-foreground"
             >
-              <div className="flex items-center gap-3 mb-2">
-                <span className="w-8 h-8 rounded-full bg-primary/10 text-primary group-hover:bg-white/20 group-hover:text-white grid place-items-center text-sm font-bold">
-                  {i + 1}
-                </span>
-                <h4 className="font-bold">{t.name}</h4>
+              <div className="flex flex-col md:flex-row items-stretch">
+                <img
+                  src={t.image}
+                  alt={`Foto ${t.name}`}
+                  loading="lazy"
+                  className="h-44 w-full md:w-44 md:h-auto object-cover"
+                />
+                <div className="p-6 flex-1">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="w-8 h-8 rounded-full bg-primary/10 text-primary group-hover:bg-white/20 group-hover:text-white grid place-items-center text-sm font-bold">
+                      {i + 1}
+                    </span>
+                    <h4 className="font-bold">{t.name}</h4>
+                  </div>
+                  <p className="text-sm text-muted-foreground group-hover:text-primary-foreground/90">
+                    {t.desc}
+                  </p>
+                </div>
               </div>
-              <p className="text-sm text-muted-foreground group-hover:text-primary-foreground/90">
-                {t.desc}
-              </p>
             </div>
           ))}
         </div>
