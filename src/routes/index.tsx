@@ -27,6 +27,7 @@ import inklinometerImg from "@/assets/Inklinometer.png";
 import logoJT2 from "@/assets/logo-jasatirta2.png";
 import logoBUMN from "@/assets/logo-bumn.png";
 import logoKemenpu from "@/assets/kemenpu.png";
+import rtowImg from "@/assets/rtow1.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -294,22 +295,36 @@ function Teknis() {
         )}
 
         {tab === "waduk" && (
-          <div className="grid md:grid-cols-4 gap-4">
-            {[
-              { label: "Volume Tampungan", value: "2,44 milyar m³", sub: "Pada TMA +107 m" },
-              { label: "Luas Genangan", value: "8.300 ha", sub: "Permukaan waduk" },
-              { label: "Daerah Tangkapan", value: "4.500 km²", sub: "Total cakupan DAS" },
-              { label: "Tangkapan Langsung", value: "380 km²", sub: "Ke Waduk Ir. H. Djuanda" },
-            ].map((s, i) => (
-              <div
-                key={i}
-                className="bg-gradient-to-br from-primary to-primary/70 text-primary-foreground rounded-2xl p-6"
-              >
-                <div className="text-3xl font-bold">{s.value}</div>
-                <div className="mt-2 font-medium">{s.label}</div>
-                <div className="text-xs text-primary-foreground/70 mt-1">{s.sub}</div>
-              </div>
-            ))}
+          <div className="space-y-6">
+            <div className="grid md:grid-cols-4 gap-4">
+              {[
+                { label: "Volume Tampungan", value: "2,44 milyar m³", sub: "Pada TMA +107 m" },
+                { label: "Luas Genangan", value: "8.300 ha", sub: "Permukaan waduk" },
+                { label: "Daerah Tangkapan", value: "4.500 km²", sub: "Total cakupan DAS" },
+                { label: "Tangkapan Langsung", value: "380 km²", sub: "Ke Waduk Ir. H. Djuanda" },
+              ].map((s, i) => (
+                <div
+                  key={i}
+                  className="bg-gradient-to-br from-primary to-primary/70 text-primary-foreground rounded-2xl p-6"
+                >
+                  <div className="text-3xl font-bold">{s.value}</div>
+                  <div className="mt-2 font-medium">{s.label}</div>
+                  <div className="text-xs text-primary-foreground/70 mt-1">{s.sub}</div>
+                </div>
+              ))}
+            </div>
+
+            <figure className="bg-card rounded-2xl p-6 border border-border">
+              <img
+                src={rtowImg}
+                alt="Rencana Tahunan Operasi Waduk Ir. H. Djuanda 2026"
+                loading="lazy"
+                className="w-full rounded-md object-cover"
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground">
+                Grafik menyajikan rencana pola perubahan Tinggi Muka Air (TMA) Waduk Ir. H. Djuanda tahun 2026 berdasarkan kondisi operasi basah, normal, dan kering. Penyajian grafik ini bertujuan untuk memberikan gambaran kondisi elevasi waduk sepanjang tahun sebagai dasar pengelolaan operasi waduk dalam memenuhi kebutuhan irigasi, pembangkit listrik, serta pengendalian sumber daya air.
+              </figcaption>
+            </figure>
           </div>
         )}
       </div>
