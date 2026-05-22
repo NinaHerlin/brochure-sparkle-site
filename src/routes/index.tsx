@@ -27,7 +27,7 @@ import inklinometerImg from "@/assets/Inklinometer.png";
 import logoJT2 from "@/assets/logo-jasatirta2.png";
 import logoBUMN from "@/assets/logo-bumn.png";
 import logoKemenpu from "@/assets/kemenpu.png";
-import rtowImg from "@/assets/rtow.png";
+import rtowImg from "@/assets/rtow1.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
