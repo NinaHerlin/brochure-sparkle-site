@@ -27,6 +27,7 @@ import inklinometerImg from "@/assets/Inklinometer.png";
 import logoJT2 from "@/assets/logo-jasatirta2.png";
 import logoBUMN from "@/assets/logo-bumn.png";
 import logoKemenpu from "@/assets/kemenpu.png";
+import rtowImg from "@/assets/rtow.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -294,7 +295,8 @@ function Teknis() {
         )}
 
         {tab === "waduk" && (
-          <div className="grid md:grid-cols-4 gap-4">
+          <>
+            <div className="grid md:grid-cols-4 gap-4">
             {[
               { label: "Volume Tampungan", value: "2,44 milyar m³", sub: "Pada TMA +107 m" },
               { label: "Luas Genangan", value: "8.300 ha", sub: "Permukaan waduk" },
@@ -310,7 +312,19 @@ function Teknis() {
                 <div className="text-xs text-primary-foreground/70 mt-1">{s.sub}</div>
               </div>
             ))}
-          </div>
+            </div>
+            <figure className="mt-8 bg-card rounded-2xl p-6 border border-border">
+              <h3 className="text-xl font-bold mb-3">Rencana Tahunan Operasi Waduk Ir. H. Djuanda 2026</h3>
+              <img
+                src={rtowImg}
+                alt="Rencana Tahunan Operasi Waduk Ir. H. Djuanda 2026"
+                className="w-full h-auto rounded-md shadow-md"
+              />
+              <figcaption className="mt-3 text-sm text-muted-foreground">
+                Grafik menyajikan rencana pola perubahan Tinggi Muka Air (TMA) Waduk Ir. H. Djuanda tahun 2026 berdasarkan kondisi operasi basah, normal, dan kering. Penyajian grafik ini bertujuan untuk memberikan gambaran kondisi elevasi waduk sepanjang tahun sebagai dasar pengelolaan operasi waduk dalam memenuhi kebutuhan irigasi, pembangkit listrik, serta pengendalian sumber daya air.
+              </figcaption>
+            </figure>
+          </>
         )}
       </div>
     </section>
